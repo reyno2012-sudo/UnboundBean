@@ -1,6 +1,7 @@
 # UnboundBean · 无界豆
 
 **让录音豆回到用户手里。**
+<img width="2235" height="1368" alt="image" src="https://github.com/user-attachments/assets/d220299e-449b-4846-9c29-8878f72b56a5" />
 
 UnboundBean（无界豆）是一个面向自有 **Soundcore Work / 安克 AI 录音豆 D3200** 的本地桌面管理工具。它通过 Tauri v2 的 Rust 后端完成 BLE 控制、P-256 密钥协商、Wi-Fi SoftAP 文件传输与 AES-256-CTR 解密，并以 React 控制台提供设备管理和 DeepSeek / OpenAI 兼容的文本总结能力。
 
