@@ -15,6 +15,17 @@ import {
 describe("Tauri command bridge", () => {
   beforeEach(() => {
     vi.clearAllMocks();
+    vi.stubGlobal("window", { __TAURI_INTERNALS__: {} });
+  });
+
+  it("explains that device commands require the desktop app", async () => {
+    vi.stubGlobal("window", {});
+    vi.mocked(invoke).mockResolvedValueOnce([]);
+
+    await expect(scanDevices()).rejects.toThrow(
+      "当前是浏览器预览，无法访问蓝牙。请启动 UnboundBean 桌面应用",
+    );
+    expect(invoke).not.toHaveBeenCalled();
   });
 
   it("maps the AI request to Rust camelCase command arguments", async () => {
