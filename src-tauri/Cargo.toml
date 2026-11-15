@@ -1,0 +1,38 @@
+[package]
+name = "unboundbean"
+version = "0.1.0"
+description = "UnboundBean 无界豆 - local desktop manager for the Soundcore Work D3200 recorder"
+authors = ["UnboundBean contributors"]
+edition = "2021"
+
+[lib]
+name = "unboundbean_lib"
+crate-type = ["lib", "cdylib", "staticlib"]
+
+[build-dependencies]
+tauri-build = { version = "2", features = [] }
+
+[dependencies]
+aes = "0.8"
+btleplug = "0.11"
+ctr = "0.9"
+futures-util = "0.3"
+hex = "0.4"
+hkdf = "0.12"
+native-tls = "0.2"
+p256 = { version = "0.13", features = ["ecdh"] }
+reqwest = { version = "0.12", default-features = false, features = ["json", "rustls-tls"] }
+serde = { version = "1", features = ["derive"] }
+serde_json = "1"
+sha2 = "0.10"
+tauri = { version = "2", features = [] }
+tauri-plugin-opener = "2"
+thiserror = "2"
+tokio = { version = "1", features = ["full"] }
+tokio-tungstenite = { version = "0.28", features = ["native-tls"] }
+url = "2"
+uuid = "1"
+zeroize = "1"
+
+[dev-dependencies]
+pretty_assertions = "1"
