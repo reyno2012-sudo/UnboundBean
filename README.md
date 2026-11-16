@@ -160,9 +160,6 @@ UnboundBean/
 
 协议实现主要依据：
 
-- [tacshi/Soundcore](https://github.com/tacshi/Soundcore)
-- [Soundcore PROTOCOL.md](https://github.com/tacshi/Soundcore/blob/main/PROTOCOL.md)
-
 上游公开资料采用 MIT License。无界豆依据公开协议进行了独立 Rust 实现，未复制专有固件、云端凭据或私钥。
 
 ## 许可证
